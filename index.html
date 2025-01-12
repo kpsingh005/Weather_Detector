@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div id="wrapper">
+        
+        <!-- heading -->
+        <h1>WEATHER APP</h1>
+
+        <!-- Tab Button -->
+        <div data-titleBar>
+            <p data-userWeather>Your Weather</p>
+            <p data-searchWeather>Search Weather</p>
+        </div>
+
+        <!--Weather Info Container-->
+        <div class="weather-container">
+
+            <!--Grant Access Location-->
+            <div class="sub-container hidden" data-grantAccess>
+                <img src="./images/location.png" alt="location" width="80" height="80">
+                <h2>Grant Location Access</h2>
+                <p>Allow Access To Get Weather Information</p>
+                <button class="btn" type="submit" grantAccessBtn>GRANT ACCESS</button>
+            </div>
+
+            <!--Search Bar-->
+            <div class="hidden" data-searchBar>
+                <input type="text" placeholder="Search for city..." data-searchInput>
+
+                <button class="btn" data-searchBtn>
+                    <img src="./images/search.png" alt="" width="20" height="20" loading="lazy">
+                </button>
+                
+            </div>
+
+            <!--Loading Window-->
+            <div class="loading-screen hidden" data-Loading>
+                <img src="./images/loading.gif" width="180" height="180" loading="lazy">
+                <p>Loading</p>
+            </div>
+            
+
+            <!--User Weather Information-->
+                <div class="sub-container hidden" data-weatherInformation>
+
+                <div class="city-info">
+                    <h2 data-cityName></h2>
+                    <img data-cityFlag>
+                </div>
+
+                <h3 weather-description></h3>
+                <img weather-image>
+
+                <h2 weather-temperture></h2>
+
+                <div class="weather-info">
+                    <div class="weather-sub-container">
+                        <img src="./images/wind.png" alt="" loading="lazy">
+                        <h3>windspeed</h3>
+                        <p data-windspeed></p>
+                    </div>
+                    
+                    <div class="weather-sub-container">
+                        <img src="./images/humidity.png" alt="" loading="lazy">
+                        <h3>humidity</h3>
+                        <p data-humidity></p>
+                    </div>
+
+                    <div class="weather-sub-container">
+                        <img src="./images/cloud.png" alt="" loading="lazy">
+                        <h3>clouds</h3>
+                        <p data-cloudiness></p>
+                    </div>
+                    
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

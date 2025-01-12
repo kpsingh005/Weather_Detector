@@ -1,0 +1,239 @@
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+:root {
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+}
+
+#wrapper {
+    max-width: 100vw;
+    min-height: 100vh;
+    color: var(--colorLight2);
+    background-color: #112d4e;
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+    overflow: hidden;
+}
+
+h1{
+    text-align: center;
+    margin-block: 2rem;
+    text-transform: uppercase;
+    word-spacing: 2px;
+    letter-spacing: 1.75px;
+}
+
+[data-titleBar]{
+    max-width: 550px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+
+[data-userWeather], [data-searchWeather] {
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+}
+
+
+.currentTab {
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 4px;
+}
+
+.weather-container{
+    margin-block: 4rem;
+}
+
+.sub-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+[data-grantAccess] img {
+    margin-bottom: 2rem;
+}
+
+[data-grantAccess] h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+[data-grantAccess] p {
+    font-size: 0.85rem;
+    font-weight: 300;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+    text-align: center;
+}
+
+.btn {
+    all: unset;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--colorDark2);
+}
+
+.loading-screen {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading-screen p {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: 0.8rem;
+}
+
+[data-searchBar] {
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0 10px;
+
+}
+
+[data-searchInput] {
+    all: unset;
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color:rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+}
+
+[data-searchInput]:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.7);;
+}
+
+[data-searchInput]::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+[data-searchBar] .btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: unset;
+    border-radius: 50%;
+}
+
+.city-info {
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.city-info h2{
+    font-size: 2rem;
+}
+
+.city-info img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+[weather-description] {
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+[weather-image] {
+    width: 90px;
+    height: 90px;
+}
+
+[weather-temperture] {
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+.weather-info {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+}
+
+.weather-sub-container {
+    width: 30%;
+    max-width: 200px;
+    background-color:rgba(219, 226, 239, 0.5);
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px 0;
+}
+
+.weather-sub-container img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.weather-sub-container h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.weather-container p {
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    display: flex;
+}
+
+@media (max-width: 620px) {
+    .weather-info {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .weather-sub-container {
+        width: 100%;
+    }
+}
